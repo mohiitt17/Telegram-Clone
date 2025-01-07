@@ -1,0 +1,77 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.content2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 90%;
+    width: 35%;
+    padding: 10px;
+    text-align: center;
+    animation: slideIn 0.4s ease forwards;
+}
+
+.content2 img {
+    height: 160px;
+    width: 160px;
+}
+
+#spinn {
+    
+    text-decoration: none;
+    color: #0088cc;
+    font-weight: 700;
+    position: relative;
+        width: 40%;
+        height: 50px;
+    border: none;
+    transition: 0.5s ease all;
+}
+
+#spinn:hover{
+    background-color: #0088cc16;
+    border-radius: 10px;
+    color: #0088cc;
+}
+
+.mobile-num {
+    width: 90%;
+}
+
+#next-btn {
+    height: 50px;
+    width: 360px;
+    color: white;
+    background-color: #0088cc;
+    transition: 0.2s ease all;
+    margin-top: 6px;
+}
+
+#next-btn:hover {
+    background-color: #0088cc42;
+    border: #0088cc42;
+}
+
+#next-btn:active {
+    background-color: #2f7091;
+}
+
+@keyframes slideIn{
+0%{
+ transform: translateX(-50%);
+ opacity: 0;
+} 100% {
+transform: translateX(0%);
+opacity: 1;
+}
+}
+
+
+
