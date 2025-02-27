@@ -1,13 +1,14 @@
 import React, { useContext } from 'react'
 import MessageInp from './MessageInp'
 import { MyContext } from '../store/MyContext'
+import desktopBg from "../assets/Desktop.png";
 
 
 const Main = ({isDarkMode}) => {
  const {selectChat} =  useContext(MyContext);
   return (
     <div className={`container`} style={{
-      backgroundImage: 'url(/src/assets/Desktop.png)',
+      backgroundImage: `url(${desktopBg})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
