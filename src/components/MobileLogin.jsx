@@ -9,7 +9,7 @@ const MobileLogin = () => {
     <div className="container">
       <div className="content2">
 
-        <img src="/public/telegram.png" className='img-fluid' alt="" />
+        <img src="/telegram.png" className='img-fluid' alt="" />
 
         <h1 style={{ fontSize: "32px", marginTop: "32px" }}>Sign in to telegram</h1>
         <p style={{ fontSize: "16px" }}>Please confirm your country code <br /> and enter your phone number</p>
