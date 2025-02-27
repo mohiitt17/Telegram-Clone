@@ -1,6 +1,8 @@
 import React, { useContext } from 'react'
 import { MyContext } from '../store/MyContext'
 import Spinner from './Spinner'
+import QR from "../assets/QR.svg";
+
 import "./QRPage.css"
 const QRLogin = () => {
     const {handleOnChangeMetohd, showSpinn} = useContext(MyContext)
@@ -9,7 +11,7 @@ const QRLogin = () => {
       <div className="container">
     <div className="content">
   
-         {showSpinn === false ? <Spinner /> : <img src="/src/assets/QR.svg" alt=""className='img-fluid' />}
+         {showSpinn === false ? <Spinner /> : <img src={QR} alt=""className='img-fluid' />}
   
       <h1>Login in to Telegram by QR code </h1>
   

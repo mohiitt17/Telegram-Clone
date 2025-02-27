@@ -4,6 +4,7 @@ import { MyContext } from '../store/MyContext'
 import { FaRegEye } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa";
 import AnimateLogo from './AnimateLogo';
+import kitten from "../assets/kitten.png"
 import HomePage from "./HomePage"
 
 const Password = ({SetPage}) => {
@@ -24,7 +25,7 @@ const Password = ({SetPage}) => {
   return (
     <div className='pass-container '>
       <div className="img-container">
-        <img  src="/src/assets/kitten.png" alt="" />
+        <img  src={kitten} alt="" />
         </div>
         <div id ='edit-icon' onClick = {() => {
           setLoginMethod("number")
