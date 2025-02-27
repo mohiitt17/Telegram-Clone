@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react'
 import { MdModeEdit } from "react-icons/md";
 import ChatList from './ChatList';
-import style from "./style.module.css"
-import { MyContext } from '../store/MyContext';
+import style from "./style.module.css";
+import chatBg from "../assets/EmptyChats.svg";
 
 const SlideBar = ({isDarkMode, toggleDarkMode, }) => {
    const  [showList, setShowList ] = useState(false);
@@ -80,7 +80,7 @@ const SlideBar = ({isDarkMode, toggleDarkMode, }) => {
 <div className={`flex-grow-1 d-flex flex-column align-items-center justify-content-center text-center ${style.outAnimate} `} style={{marginTop :'150px'}}>
       <div className="mb-4">
         <img
-          src="/src/assets/EmptyChats.svg"
+          src= {chatBg}
           alt="Empty chat"
           style={{ width: '220px', height: '220px' }}
         />

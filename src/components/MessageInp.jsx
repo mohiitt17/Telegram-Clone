@@ -14,19 +14,19 @@ const MessageInp = ({ isDarkMode }) => {
   const textareaRef = useRef(null);
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
-      e.preventDefault(); // Prevent new line
+      e.preventDefault(); 
   
-      const newMessage = e.target.value.trim(); // Remove extra spaces
+      const newMessage = e.target.value.trim(); 
   
       if (newMessage) {
         setUserMessage(prev => ({
           ...prev,
-          [selectChat.name]: [...(prev[selectChat.name] || []), newMessage] // Add new message to array
+          [selectChat.name]: [...(prev[selectChat.name] || []), newMessage] 
         }));
   
         setTimeout(() => {
           e.target.value = "";
-          handleInput(); // Reset height
+          handleInput(); 
         }, 0);
       }
     }
