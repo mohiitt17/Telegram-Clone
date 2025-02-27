@@ -3,14 +3,14 @@ import MobileLogin from './MobileLogin'
 import QRLogin from "./QRLogin"
 import { MyContext } from '../store/MyContext'
 import Password from './Password'
-const LoginContainer = () => {
+const LoginContainer = ({SetPage}) => {
   const {loginMethod, clicked} = useContext(MyContext)
   return <div className="loginPage-container">
 {
   loginMethod === "number"
     ? <MobileLogin />
     : loginMethod === "password"
-    ? <Password />
+    ? <Password SetPage = {SetPage}/>
     : <QRLogin />
 }
     </div>

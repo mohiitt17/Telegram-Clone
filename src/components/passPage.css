@@ -39,7 +39,7 @@
 .pass-container p {
     width: 100%;
     position: relative;
-    top: -27%;
+    top: -25%;
 }
 
 .pass-container input {
@@ -65,7 +65,7 @@
 #edit-icon {
     position: relative;
     left: 33%;
-    top: -3.2%;
+    top: -4%;
     opacity: 0.4;
    cursor: pointer;
    z-index: 2;
@@ -78,7 +78,40 @@
     left: -4%;
 }
 
+.toggle-eye {
+    height: 20px;
+    width: 50px;
+    position: relative;
+    z-index: 2;
+    top: -115px;
+    opacity: 0.5;
+    left: 100%;
+    transition: 0.5s ease all;
+    cursor: pointer;
+}
 
+.toggle-eye:hover  {
+    opacity: 1;
+}
+
+.toggle-eye:active {
+    opacity: 1;
+}
+
+.lottie-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #212121;
+    z-index: 2;
+    animation: intro 1s ease all forwards;
+  }
 
 @keyframes intro{
     0%{
@@ -89,6 +122,8 @@
     opacity: 1;
     }
     }
+
+  
 
 
 

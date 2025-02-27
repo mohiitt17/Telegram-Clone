@@ -1,5 +1,4 @@
 import React from 'react'
-
 const Spinner = () => {
   return (
 <div className="d-flex justify-content-center" style={{position : "fixed", top : "18%",}}>

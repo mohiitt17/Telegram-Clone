@@ -1,0 +1,34 @@
+.app-container {
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .app-container.light {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  .app-container.dark {
+    background-color: #212121;
+    color: #ffffff;
+  }
+  
+  /* Theme Toggle Button */
+  .theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #0088cc;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .theme-toggle:hover {
+    background-color: #005f99;
+  }
+  
+
+  

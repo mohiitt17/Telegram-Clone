@@ -1,9 +1,26 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import  './passPage.css'
 import { MyContext } from '../store/MyContext'
-const Password = () => {
-  const {mobileNum, setLoginMethod, checkPassword, setMobileNum} =  useContext(MyContext)
+import { FaRegEye } from "react-icons/fa";
+import { FaRegEyeSlash } from "react-icons/fa";
+import AnimateLogo from './AnimateLogo';
+import HomePage from "./HomePage"
+
+const Password = ({SetPage}) => {
+  const {mobileNum, setLoginMethod, setShowEye, eyeToggle, showEye, setTab} =  useContext(MyContext)
   const [message, setMessage] = useState("")
+  const [showLogo, setShowLogo] = useState(false)
+
+  useEffect(() => {
+    if (showLogo) {
+      const timer = setTimeout(() => {
+        setShowLogo(false); 
+        SetPage("home")
+      }, 3000); 
+      return () => clearTimeout(timer); 
+    }
+  }, [showLogo]);
+
   return (
     <div className='pass-container '>
       <div className="img-container">
@@ -16,14 +33,25 @@ const Password = () => {
         <p>Enter your Password Here :</p>
         <b className='alert-text'>{message}</b>
         <div className="col-md-4">
-    <input type="text" className="form-control " id="validationDefault01"   onKeyDown={(e) => {
+       {showEye == false ? <FaRegEye className='toggle-eye' onClick={() => {
+        eyeToggle()
+       }} /> : <FaRegEyeSlash className='toggle-eye' onClick={() => {
+        eyeToggle();
+
+       }} /> }
+
+    <input type= {showEye ? "text" : "password"} className="form-control " id="validationDefault01"   onKeyDown={(e) => {
+      if(showEye == true) {
+        document.getElementById("validationDefault01").type = "text"
+      } else if (showEye) {
+        document.getElementById("validationDefault01").type = "password"
+      }
   if (e.key === "Enter") {
-    const inputValue = e.target.value.trim(); 
+    const inputValue = e.target.value; 
     if (inputValue.length < 6  ) {
      setMessage("Password was incorrect ! please try again")
     } else if (inputValue.length >= 6) {
-      console.log("Password was true");
-      setMessage("")
+      setShowLogo(true)
     } else if (inputValue.length > 0) {
       setMessage("Password cannot be empty")
     }
@@ -32,7 +60,7 @@ const Password = () => {
 }}
  placeholder='Password' />
   </div>
-  
+  {showLogo && <AnimateLogo /> }
     </div>
   )
 }
